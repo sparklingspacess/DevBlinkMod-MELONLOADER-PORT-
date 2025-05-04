@@ -23,7 +23,7 @@ namespace DevBlinkMod
             
                 Stream manifestResourceStream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"DevBlinkMod.Resources.blinksheet.png");
                 byte[] bytes = new byte[manifestResourceStream.Length];
-                await manifestResourceStream.ReadAsync(bytes, 0, bytes.Length);
+                manifestResourceStream.ReadAsync(bytes, 0, bytes.Length);
 
                 faceSheet = new Texture2D(192, 65, TextureFormat.RGB24, false)
                 {
