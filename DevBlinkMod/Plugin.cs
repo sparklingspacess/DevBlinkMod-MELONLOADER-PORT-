@@ -34,6 +34,19 @@ namespace DevBlinkMod
                 faceSheet.LoadImage(bytes);
                 faceSheet.Apply();
                 BlinkLogger.LogMessage("Generated face texture", BlinkLogger.LogType.Default);
+
+                //i think this will work?
+
+                foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+                {
+                    if (go.GetComponent<VRRig>() != null)
+                    {
+                        if (go.GetComponent<BlinkManager>() == null)
+                        {
+                            go.AddComponent<BlinkManager>();
+                        }
+                    }
+                }
             }
         }
     }
