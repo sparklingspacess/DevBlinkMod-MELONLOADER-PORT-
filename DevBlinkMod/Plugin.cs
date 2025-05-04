@@ -13,7 +13,7 @@ namespace DevBlinkMod
         private bool loaded;
         public Texture2D faceSheet;
 
-        public override void OnSceneWasInitialized()
+        public override void OnSceneWasInitialized(int buildIndex, string sceneName)
         {
             if (!loaded)
             {
