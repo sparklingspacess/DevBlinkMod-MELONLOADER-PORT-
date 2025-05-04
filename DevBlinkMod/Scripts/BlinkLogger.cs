@@ -22,7 +22,9 @@ namespace DevBlinkMod.Scripts
                 _ => throw new IndexOutOfRangeException()
             };
 
-            UnityEngine.Debug.unityLogger.Log(logType, string.Format("[{0}, {1}] {2}", PluginInfo.Name, DateTime.Now, message));
+            //i have no idea why this is coded like it is so im just gonna disable it
+            
+            //UnityEngine.Debug.unityLogger.Log(logType, string.Format("[{0}, {1}] {2}", PluginInfo.Name, DateTime.Now, message));
         }
     }
 }
